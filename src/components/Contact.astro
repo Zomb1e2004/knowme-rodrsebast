@@ -1,0 +1,154 @@
+---
+import Section from "../shared/components/Section.astro";
+---
+
+<Section
+  id="contact"
+  border="border-y border-white/5"
+  padding="py-16 md:py-24 lg:py-32"
+  background="bg-transparent"
+>
+  <div class="max-w-4xl mx-auto w-full">
+    <div class="text-center mb-10 lg:mb-16">
+      <h2
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 lg:mb-6 tracking-tight"
+      >
+        Trabajemos <span class="italic text-[#b27d7c] font-light">Juntos.</span>
+      </h2>
+      <p
+        class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed"
+      >
+        Actualmente disponible para oportunidades laborales y roles técnicos a
+        tiempo completo. Completa el formulario a continuación para contactarme.
+      </p>
+    </div>
+
+    <div
+      class="bg-[#151518] border border-white/5 p-6 sm:p-8 md:p-12 rounded-lg relative overflow-hidden"
+    >
+      <div class="absolute inset-0 grid-lines opacity-5 pointer-events-none">
+      </div>
+
+      <form id="contactForm" class="relative z-10 flex flex-col gap-6 md:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div class="flex flex-col gap-3">
+            <label
+              class="font-label text-[10px] tracking-widest text-white/50 uppercase font-bold"
+              >Nombre Completo</label
+            >
+            <input
+              type="text"
+              placeholder="Juan Pérez"
+              class="bg-[#0b0c0c] border border-white/5 rounded-md px-4 py-3.5 text-white placeholder-white/20 focus:outline-none focus:border-[#b27d7c] transition-colors text-sm"
+            />
+          </div>
+          <div class="flex flex-col gap-3">
+            <label
+              class="font-label text-[10px] tracking-widest text-white/50 uppercase font-bold"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              placeholder="juan@ejemplo.com"
+              class="bg-[#0b0c0c] border border-white/5 rounded-md px-4 py-3.5 text-white placeholder-white/20 focus:outline-none focus:border-[#b27d7c] transition-colors text-sm"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <label
+            class="font-label text-[10px] tracking-widest text-white/50 uppercase font-bold"
+            >Servicios</label
+          >
+          <div class="relative">
+            <select
+              class="w-full bg-[#0b0c0c] border border-white/5 rounded-md px-4 py-3.5 text-white focus:outline-none focus:border-[#b27d7c] transition-colors appearance-none cursor-pointer text-sm"
+            >
+              <option value="" disabled selected class="text-white/50"
+                >Consulta del Proyecto</option
+              >
+              <option value="Desarrollo Frontend">Desarrollo Frontend</option>
+              <option value="Desarrollo Backend y APIs"
+                >Desarrollo Backend y APIs</option
+              >
+              <option value="Desarrollo Full/Stack"
+                >Desarrollo Full/Stack</option
+              >
+              <option value="Otros">Otros</option>
+            </select>
+            <div
+              class="absolute inset-y-0 right-4 flex items-center pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-white/50"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path></svg
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <label
+            class="font-label text-[10px] tracking-widest text-white/50 uppercase font-bold"
+            >Mensaje</label
+          >
+          <textarea
+            rows="5"
+            placeholder="Proporciona un breve resumen de los requisitos de tu proyecto..."
+            class="bg-[#0b0c0c] border border-white/5 rounded-md px-4 py-3.5 text-white placeholder-white/20 focus:outline-none focus:border-[#b27d7c] transition-colors resize-none text-sm"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="cursor-pointer w-full bg-[#98141d] hover:bg-[#b51a24] text-white font-bold tracking-[0.2em] text-xs uppercase py-4 md:py-5 rounded-md transition-colors mt-2"
+          >Enviar Mensaje</button
+        >
+      </form>
+    </div>
+  </div>
+</Section>
+
+<script>
+  const form = document.getElementById("contactForm") as HTMLFormElement | null;
+
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const inputNombre = form.querySelector(
+        'input[type="text"]',
+      ) as HTMLInputElement | null;
+      const inputCorreo = form.querySelector(
+        'input[type="email"]',
+      ) as HTMLInputElement | null;
+      const selectServicio = form.querySelector(
+        "select",
+      ) as HTMLSelectElement | null;
+      const inputMensaje = form.querySelector(
+        "textarea",
+      ) as HTMLTextAreaElement | null;
+
+      const nombre = inputNombre?.value.trim() || "";
+      const correo = inputCorreo?.value.trim() || "";
+      const servicio = selectServicio?.value || "";
+      const mensaje = inputMensaje?.value.trim() || "";
+
+      if (!nombre || !correo || !servicio || !mensaje) return;
+
+      const texto = `¡Hola Rodrigo! Soy ${nombre} y me contacto contigo para ofrecerte una oportunidad laboral\nServicio: ${servicio}\nDetalle: ${mensaje}\nMi correo: ${correo}`;
+
+      const url = `https://wa.me/51993808974?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+
+      form.reset();
+    });
+  }
+</script>

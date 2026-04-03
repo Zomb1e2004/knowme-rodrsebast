@@ -1,0 +1,43 @@
+---
+export interface SocialLink {
+  socialName: string;
+  socialURL: string;
+}
+
+export interface Props {
+  socials: SocialLink[];
+}
+
+const { socials = [] } = Astro.props as Props;
+---
+
+<footer
+  class="mt-auto w-full py-8 md:py-10 bg-[#36363c]/80 backdrop-blur-md border-t border-white/5 transition-all duration-300"
+>
+  <div
+    class="flex flex-col md:flex-row justify-between items-center px-6 md:px-8 max-w-7xl mx-auto"
+  >
+    <p
+      class="text-gray-400 tracking-wide text-xs sm:text-sm mb-6 md:mb-0 text-center md:text-left"
+    >
+      © 2024 Rodrigo Sebastián Laura Moreno. Construido con sofisticación
+      técnica.
+    </p>
+    <div
+      class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs sm:text-sm tracking-wide"
+    >
+      {
+        socials.map((social) => (
+          <a
+            class="text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300"
+            href={social.socialURL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {social.socialName}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</footer>

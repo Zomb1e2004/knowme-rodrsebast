@@ -1,0 +1,21 @@
+---
+export interface Props {
+  id?: string;
+  background?: string;
+  border?: string;
+  padding?: string;
+}
+
+const {
+  id,
+  background = "bg-[#121414]",
+  border = "",
+  padding = "py-20",
+} = Astro.props as Props;
+---
+
+<section id={id} class={`${background} ${border} ${padding}`}>
+  <div class="max-w-7xl mx-auto px-8">
+    <slot />
+  </div>
+</section>
