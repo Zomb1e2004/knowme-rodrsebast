@@ -9,7 +9,9 @@ export interface ProjectItem {
   projectDuration: string;
   projectImage?: string | ImageMetadata;
   githubUrl?: string;
+  githubText?: string;
   websiteUrl?: string;
+  websiteText?: string;
 }
 
 export interface Props {
@@ -120,7 +122,7 @@ const { projects = [] } = Astro.props as Props;
                     rel="noopener noreferrer"
                     class="inline-flex items-center gap-3 text-xs md:text-sm font-headline tracking-[0.2em] text-white hover:text-maroon-deep transition-colors uppercase font-bold group"
                   >
-                    Visitar GitHub
+                    {project.githubText || "Visitar GitHub"}
                     <svg
                       class="w-4 h-4 text-maroon-deep group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
                       fill="none"
@@ -145,7 +147,7 @@ const { projects = [] } = Astro.props as Props;
                     rel="noopener noreferrer"
                     class="inline-flex items-center gap-3 text-xs md:text-sm font-headline tracking-[0.2em] text-white hover:text-maroon-deep transition-colors uppercase font-bold group"
                   >
-                    Visitar Página
+                    {project.websiteText || "Visitar Página"}
                     <svg
                       class="w-4 h-4 text-maroon-deep group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
                       fill="none"
