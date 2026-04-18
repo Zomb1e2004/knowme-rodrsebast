@@ -22,236 +22,249 @@ import TuTienda from "../assets/projects/TuTienda.png";
 import myStreet97 from "../assets/projects/myStreet97.png";
 import TaskNest from "../assets/projects/TaskNest.png";
 import ApiIntiSDK from "../assets/projects/ApiIntiSDK.png";
+import RogerLogger from "../assets/projects/RogerLogger.png";
 
 const links = [
-  { link: "Intro", href: "#hero" },
-  { link: "Filosofía", href: "#philosophy" },
-  {
-    link: "Formación académica & Laboral",
-    href: "#experience",
-  },
-  {
-    link: "Proyectos personales",
-    href: "#projects",
-  },
-  {
-    link: "Comentarios",
-    href: "#comments",
-  },
-  { link: "Contáctame", href: "#contact" },
+    { link: "Intro", href: "#hero" },
+    { link: "Filosofía", href: "#philosophy" },
+    {
+        link: "Formación académica & Laboral",
+        href: "#experience",
+    },
+    {
+        link: "Proyectos personales",
+        href: "#projects",
+    },
+    {
+        link: "Comentarios",
+        href: "#comments",
+    },
+    { link: "Contáctame", href: "#contact" },
 ];
 
 const experiences = [
-  {
-    companyImage: UPN,
-    experienceDescription:
-      "Formación en Ingeniería de Sistemas Computacionales con certificación en Desarrollo de Aplicaciones Tecnológicas.",
-    technologiesUsed: [
-      "Scrum",
-      "Python",
-      "GitHub",
-      "PostgreSQL",
-      "MySQL",
-      "MSSQL",
-    ],
-    duration: "5 años",
-  },
-  {
-    companyImage: AlfaGrup,
-    experienceDescription:
-      "Mantenimiento y desarrollo de endpoints, integración con la API de Meta (WhatsApp Business), OCR, logging centralizado y middlewares de autorización.",
-    technologiesUsed: [
-      "Node.js",
-      "NestJS",
-      "PostgreSQL",
-      "Vue",
-      "Tailwind CSS",
-      "Axios",
-      "Pinia",
-    ],
-    duration: "6 meses",
-  },
-  {
-    companyImage: Accenti,
-    experienceDescription:
-      "Desarrollo de APIs escalables con integración de servicios externos como Nylas y Stripe, despliegues en AWS y gestión de pipelines CI/CD.",
-    technologiesUsed: [
-      "Node.js",
-      "Express",
-      "TypeScript",
-      "AWS",
-      "DynamoDB",
-      "Lambda",
-      "S3",
-    ],
-    duration: "6 meses",
-  },
+    {
+        companyImage: UPN,
+        experienceDescription:
+            "Formación en Ingeniería de Sistemas Computacionales con certificación en Desarrollo de Aplicaciones Tecnológicas.",
+        technologiesUsed: [
+            "Scrum",
+            "Python",
+            "GitHub",
+            "PostgreSQL",
+            "MySQL",
+            "MSSQL",
+        ],
+        duration: "5 años",
+    },
+    {
+        companyImage: AlfaGrup,
+        experienceDescription:
+            "Mantenimiento y desarrollo de endpoints, integración con la API de Meta (WhatsApp Business), OCR, logging centralizado y middlewares de autorización.",
+        technologiesUsed: [
+            "Node.js",
+            "NestJS",
+            "PostgreSQL",
+            "Vue",
+            "Tailwind CSS",
+            "Axios",
+            "Pinia",
+        ],
+        duration: "6 meses",
+    },
+    {
+        companyImage: Accenti,
+        experienceDescription:
+            "Desarrollo de APIs escalables con integración de servicios externos como Nylas y Stripe, despliegues en AWS y gestión de pipelines CI/CD.",
+        technologiesUsed: [
+            "Node.js",
+            "Express",
+            "TypeScript",
+            "AWS",
+            "DynamoDB",
+            "Lambda",
+            "S3",
+        ],
+        duration: "6 meses",
+    },
 ];
 
 const projects = [
-  {
-    projectName: "TuTienda :)",
-    projectDescription:
-      "Aplicación web de gestión de tienda que permite administrar productos, clientes y ventas desde una interfaz moderna y sin necesidad de backend ni base de datos remota. Toda la información se persiste localmente en el navegador mediante IndexedDB.",
-    projectTechnologies: [
-      "Svelte",
-      "Vite",
-      "TypeScript",
-      "Svelte Spa Router",
-      "IDB",
-      "ApexCharts",
-      "Svelte Sonner",
-    ],
-    projectDuration: "Hecho en 1 semana y 4 días [2026]",
-    projectImage: TuTienda,
-    githubUrl: "https://github.com/Zomb1e2004/tutienda-app",
-    websiteUrl: "https://tutienda-app.vercel.app/",
-  },
-  {
-    projectName: "TaskNest!",
-    projectDescription:
-      "TaskNest es una aplicación de escritorio diseñada para ayudarte a organizar notas, ideas y tareas en un solo lugar de forma simple y ordenada. Permite gestionar pendientes, escribir contenido fácilmente y mantener visible lo importante mediante etiquetas, prioridades y un panel principal que resume tu actividad, ofreciendo una experiencia práctica para planificar y mantener todo bajo control.",
-    projectTechnologies: [
-      "Vue",
-      "Vite",
-      "TypeScript",
-      "Vue Router",
-      "IDB",
-      "Motion V",
-      "Marked",
-      "Text-to-Speech JS",
-      "Tauri",
-    ],
-    projectDuration: "Hecho en 2 semanas [2026]",
-    projectImage: TaskNest,
-    githubUrl: "https://github.com/Zomb1e2004/tasknest-desktop-app/releases",
-    websiteUrl: "https://tasknest-landingpage.vercel.app/",
-    websiteText: "Visitar página",
-  },
-  {
-    projectName: "myStreet97",
-    projectDescription:
-      "myStreet97 es una aplicación web (de maquetado) diseñada para la gestión integral de una tienda o punto de venta. Facilita la administración del catálogo de productos, compras, métricas de clientes y autenticación de usuarios. El sistema presenta una interfaz de usuario moderna, fluida y altamente interactiva, orientada a ofrecer la mejor experiencia posible (UX) en operaciones de gestión diaria.",
-    projectTechnologies: [
-      "React",
-      "Vite",
-      "TypeScript",
-      "Tailwind",
-      "Motion",
-      "Swiper",
-      "React Hot Toast",
-    ],
-    projectDuration: "Hecho en 2 semanas y 3 días [2025]",
-    projectImage: myStreet97,
-    githubUrl: "https://github.com/Zomb1e2004/mystreet97",
-    websiteUrl: "https://mystreet97.netlify.app/home",
-  },
-  {
-    projectName: "API Inti SDK [No oficial]",
-    projectDescription:
-      "Package publicado en NPM desarrollado en TypeScript para consumir la API de API Inti y obtener información de contribuyentes peruanos mediante consultas por RUC y/o DNI de forma sencilla.",
-    projectTechnologies: ["NPM", "TSU", "TypeScript", "Axios", "JSDoc"],
-    projectDuration: "Hecho en 3 horas con 30 minutos [2026]",
-    projectImage: ApiIntiSDK,
-    githubUrl: "https://github.com/Zomb1e2004/api-inti-sdk",
-    websiteUrl: "https://www.npmjs.com/package/apiinti-sdk",
-    websiteText: "Visitar NPM",
-  },
+    {
+        projectName: "TuTienda :)",
+        projectDescription:
+            "Aplicación web de gestión de tienda que permite administrar productos, clientes y ventas desde una interfaz moderna y sin necesidad de backend ni base de datos remota. Toda la información se persiste localmente en el navegador mediante IndexedDB.",
+        projectTechnologies: [
+            "Svelte",
+            "Vite",
+            "TypeScript",
+            "Svelte Spa Router",
+            "IDB",
+            "ApexCharts",
+            "Svelte Sonner",
+        ],
+        projectDuration: "Hecho en 1 semana y 4 días [2026]",
+        projectImage: TuTienda,
+        githubUrl: "https://github.com/Zomb1e2004/tutienda-app",
+        websiteUrl: "https://tutienda-app.vercel.app/",
+    },
+    {
+        projectName: "TaskNest!",
+        projectDescription:
+            "TaskNest es una aplicación de escritorio diseñada para ayudarte a organizar notas, ideas y tareas en un solo lugar de forma simple y ordenada. Permite gestionar pendientes, escribir contenido fácilmente y mantener visible lo importante mediante etiquetas, prioridades y un panel principal que resume tu actividad, ofreciendo una experiencia práctica para planificar y mantener todo bajo control.",
+        projectTechnologies: [
+            "Vue",
+            "Vite",
+            "TypeScript",
+            "Vue Router",
+            "IDB",
+            "Motion V",
+            "Marked",
+            "Text-to-Speech JS",
+            "Tauri",
+        ],
+        projectDuration: "Hecho en 2 semanas [2026]",
+        projectImage: TaskNest,
+        githubUrl:
+            "https://github.com/Zomb1e2004/tasknest-desktop-app/releases",
+        websiteUrl: "https://tasknest-landingpage.vercel.app/",
+        websiteText: "Visitar página",
+    },
+    {
+        projectName: "myStreet97",
+        projectDescription:
+            "myStreet97 es una aplicación web (de maquetado) diseñada para la gestión integral de una tienda o punto de venta. Facilita la administración del catálogo de productos, compras, métricas de clientes y autenticación de usuarios. El sistema presenta una interfaz de usuario moderna, fluida y altamente interactiva, orientada a ofrecer la mejor experiencia posible (UX) en operaciones de gestión diaria.",
+        projectTechnologies: [
+            "React",
+            "Vite",
+            "TypeScript",
+            "Tailwind",
+            "Motion",
+            "Swiper",
+            "React Hot Toast",
+        ],
+        projectDuration: "Hecho en 2 semanas y 3 días [2025]",
+        projectImage: myStreet97,
+        githubUrl: "https://github.com/Zomb1e2004/mystreet97",
+        websiteUrl: "https://mystreet97.netlify.app/home",
+    },
+    {
+        projectName: "API Inti SDK [No oficial]",
+        projectDescription:
+            "Package publicado en NPM desarrollado en TypeScript para consumir la API de API Inti y obtener información de contribuyentes peruanos mediante consultas por RUC y/o DNI de forma sencilla.",
+        projectTechnologies: ["NPM", "TSUP", "TypeScript", "Axios", "JSDoc"],
+        projectDuration: "Hecho en 3 horas con 30 minutos [2026]",
+        projectImage: ApiIntiSDK,
+        githubUrl: "https://github.com/Zomb1e2004/api-inti-sdk",
+        websiteUrl: "https://www.npmjs.com/package/apiinti-sdk",
+        websiteText: "Visitar NPM",
+    },
+    {
+        projectName: "Roger Logger",
+        projectDescription:
+            "Logger visual para consola con formato de cuadro decorativo, construido sobre boxen. Genera bloques enmarcados con título, mensaje y datos estructurados, con soporte para colores ANSI y múltiples estilos de borde. Diseñado para mejorar la legibilidad de logs en aplicaciones Node.js, scripts CLI y procesos backend.",
+        projectTechnologies: ["TSUP", "NPM", "TypeScript", "boxen", "JSDoc"],
+        projectDuration: "Hecho en 2 horas y 35 minutos [2026]",
+        projectImage: RogerLogger,
+        githubUrl: "https://github.com/Zomb1e2004/roger-logger",
+        websiteUrl: "https://www.npmjs.com/package/roger-logger",
+        websiteText: "Visitar NPM",
+    },
 ];
 
 const comments = [
-  {
-    fullName: "Nelson Valverde La Torre",
-    specialty: "[Senior] Full/Stack Developer & Devops",
-    comment:
-      "Autodidacta, con muchos ánimos de aprender, competitivo, responsable y sobre todo muy colaborativo además tiene un fuerte compromiso con cumplir con los objetivos",
-    photoUrl: Nelson,
-    linkedInUrl: "https://www.linkedin.com/in/nelsonvalverdelt/",
-  },
-  {
-    fullName: "Yessenia Milagritos Asencios Rodríguez",
-    specialty: "[Senior] FrontEnd Developer & BackEnd & Data Analyst",
-    comment:
-      "Profesional con iniciativa, enfoque en resultados y una sólida capacidad para resolver problemas. No se limita a cumplir tareas, sino que constantemente busca mejorar, propone soluciones y aporta ideas que generan valor real. Aprende rápido, se adapta con facilidad y mantiene una actitud proactiva en todo momento. Trabaja muy bien en equipo, comunica sus ideas con claridad y demuestra un alto nivel de compromiso y responsabilidad. Por su desempeño y forma de trabajar, estoy segura de que aportará desde el primer momento en cualquier organización.",
-    photoUrl: "",
-    linkedInUrl:
-      "https://www.linkedin.com/in/yessenia-milagritos-asencios-rodriguez-284060105/",
-  },
-  // {
-  //   fullName: "Carlos Eduardo Chavarría Mujica",
-  //   specialty: "[Mid-Level] Full/Stack Developer (.NET, Desktop & Web)",
-  //   comment: "Un crack.",
-  //   photoUrl: "",
-  //   linkedInUrl: "https://www.linkedin.com/in/carlos-chavarria-mujica/",
-  // },
-  {
-    fullName: "Cristian Zúñiga Príncipe",
-    specialty: "[Mid-Level] Desarrollador Backend .NET",
-    comment:
-      "Trabajar con Rodrigo fue muy positivo; siempre mostró responsabilidad, cumplió con los plazos y contribuyó a que el equipo avanzara de manera eficiente gracias a su enfoque organizado y colaboración constante.",
-    photoUrl: Cristian,
-    linkedInUrl: "https://www.linkedin.com/in/crisezp/",
-  },
-  {
-    fullName: "Kristinne Paola Barrera Jimenez",
-    specialty: "[Senior] UX/UI Designer | E-commerce & Healthtech",
-    comment:
-      "Rodrigo siempre demuestra un gran compromiso con el área, cumpliendo todas las fechas de entrega y agilizando el trabajo mediante diversas metodologías.",
-    photoUrl: Kristinne,
-    linkedInUrl:
-      "https://www.linkedin.com/in/kristinne-barrera-jimenez-a795141ba/",
-  },
+    {
+        fullName: "Nelson Valverde La Torre",
+        specialty: "[Senior] Full/Stack Developer & Devops",
+        comment:
+            "Autodidacta, con muchos ánimos de aprender, competitivo, responsable y sobre todo muy colaborativo además tiene un fuerte compromiso con cumplir con los objetivos",
+        photoUrl: Nelson,
+        linkedInUrl: "https://www.linkedin.com/in/nelsonvalverdelt/",
+    },
+    {
+        fullName: "Yessenia Milagritos Asencios Rodríguez",
+        specialty: "[Senior] FrontEnd Developer & BackEnd & Data Analyst",
+        comment:
+            "Profesional con iniciativa, enfoque en resultados y una sólida capacidad para resolver problemas. No se limita a cumplir tareas, sino que constantemente busca mejorar, propone soluciones y aporta ideas que generan valor real. Aprende rápido, se adapta con facilidad y mantiene una actitud proactiva en todo momento. Trabaja muy bien en equipo, comunica sus ideas con claridad y demuestra un alto nivel de compromiso y responsabilidad. Por su desempeño y forma de trabajar, estoy segura de que aportará desde el primer momento en cualquier organización.",
+        photoUrl: "",
+        linkedInUrl:
+            "https://www.linkedin.com/in/yessenia-milagritos-asencios-rodriguez-284060105/",
+    },
+    // {
+    //   fullName: "Carlos Eduardo Chavarría Mujica",
+    //   specialty: "[Mid-Level] Full/Stack Developer (.NET, Desktop & Web)",
+    //   comment: "Un crack.",
+    //   photoUrl: "",
+    //   linkedInUrl: "https://www.linkedin.com/in/carlos-chavarria-mujica/",
+    // },
+    {
+        fullName: "Cristian Zúñiga Príncipe",
+        specialty: "[Mid-Level] Desarrollador Backend .NET",
+        comment:
+            "Trabajar con Rodrigo fue muy positivo; siempre mostró responsabilidad, cumplió con los plazos y contribuyó a que el equipo avanzara de manera eficiente gracias a su enfoque organizado y colaboración constante.",
+        photoUrl: Cristian,
+        linkedInUrl: "https://www.linkedin.com/in/crisezp/",
+    },
+    {
+        fullName: "Kristinne Paola Barrera Jimenez",
+        specialty: "[Senior] UX/UI Designer | E-commerce & Healthtech",
+        comment:
+            "Rodrigo siempre demuestra un gran compromiso con el área, cumpliendo todas las fechas de entrega y agilizando el trabajo mediante diversas metodologías.",
+        photoUrl: Kristinne,
+        linkedInUrl:
+            "https://www.linkedin.com/in/kristinne-barrera-jimenez-a795141ba/",
+    },
 ];
 
 const socials = [
-  { socialName: "GitHub", socialURL: "https://github.com/Zomb1e2004" },
-  {
-    socialName: "LinkedIn",
-    socialURL: "https://www.linkedin.com/in/rodrigolauramoreno/",
-  },
-  {
-    socialName: "Instagram",
-    socialURL: "https://www.instagram.com/rodrsebast/",
-  },
+    { socialName: "GitHub", socialURL: "https://github.com/Zomb1e2004" },
+    {
+        socialName: "LinkedIn",
+        socialURL: "https://www.linkedin.com/in/rodrigolauramoreno/",
+    },
+    {
+        socialName: "Instagram",
+        socialURL: "https://www.instagram.com/rodrsebast/",
+    },
 ];
 ---
 
 <BaseLayout title="KnowMe | Rodrigo S. L. M." links={links} socials={socials}>
-  <Hero
-    firstNames="RODRIGO SEBASTIÁN"
-    lastNames="LAURA MORENO"
-    topText="Desarrollador Full/Stack"
-    description="FullStack Developer especializado en APIs robustas con Node.js y TypeScript, experiencia en PostgreSQL, DynamoDB y AWS para despliegue y escalabilidad, integrando servicios externos y aplicando buenas prácticas de arquitectura, seguridad y CI/CD."
-    technologies={[
-      "Node.js",
-      "TypeScript",
-      "JavaScript",
-      "Java",
-      "PHP",
-      "SpringBoot",
-      "C#",
-      "ASP.NET Core Web API",
-      "PostgreSQL",
-      "AWS",
-      "Vue",
-      "React",
-      "Svelte",
-      "Astro",
-      "TailwindCSS",
-      "Bootstrap",
-      "Tauri",
-      "Electron",
-    ]}
-    yearsOfExperience={1}
-  />
+    <Hero
+        firstNames="RODRIGO SEBASTIÁN"
+        lastNames="LAURA MORENO"
+        topText="Desarrollador Full/Stack"
+        description="FullStack Developer especializado en APIs robustas con Node.js y TypeScript, experiencia en PostgreSQL, DynamoDB y AWS para despliegue y escalabilidad, integrando servicios externos y aplicando buenas prácticas de arquitectura, seguridad y CI/CD."
+        technologies={[
+            "Node.js",
+            "TypeScript",
+            "JavaScript",
+            "Java",
+            "PHP",
+            "SpringBoot",
+            "C#",
+            "ASP.NET Core Web API",
+            "PostgreSQL",
+            "AWS",
+            "Vue",
+            "React",
+            "Svelte",
+            "Astro",
+            "TailwindCSS",
+            "Bootstrap",
+            "Tauri",
+            "Electron",
+        ]}
+        yearsOfExperience={1}
+    />
 
-  <Philosophy />
+    <Philosophy />
 
-  <Experience experiences={experiences} />
+    <Experience experiences={experiences} />
 
-  <Projects projects={projects} />
+    <Projects projects={projects} />
 
-  <Comments comments={comments} />
+    <Comments comments={comments} />
 
-  <Contact />
+    <Contact />
 </BaseLayout>
